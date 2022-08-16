@@ -13,13 +13,5 @@ app = Celery('config')
 #   should have a `CELERY_` prefix.
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-# app.conf.beat_schedule = {
-#     'send_email_30s': {
-#         'task': 'users.tasks.mehran_test',
-#         'schedule': 100.0
-#     }
-# }
-
-
 # Load task modules from all registered Django app configs.
 app.autodiscover_tasks()

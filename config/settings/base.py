@@ -148,7 +148,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
-print(EMAIL_HOST_USER)
 # celery
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
@@ -156,5 +155,5 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 REST_FRAMEWORK = {
-    'EXCEPTION_HANDLER': 'utils.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'utils.exception.exceptions.custom_exception_handler',
 }
