@@ -1,7 +1,7 @@
 from .base import *
 
 try:
-    from config.settings.local import *
+    from news_letter.settings.local import *
 except Exception:
     pass
 
